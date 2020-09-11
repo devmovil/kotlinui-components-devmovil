@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/nav_designFragment">
+
+    <fragment
+        android:id="@+id/nav_designFragment"
+        android:name="com.rnnzzo.uxdesign.ui.desing.DesignFragment"
+        android:label="Design">
+        <action
+            android:id="@+id/action_nav_designFragment_to_cardsFragment"
+            app:destination="@id/nav_cardsFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_dialogsFragment"
+            app:destination="@id/nav_dialogsFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_editTextFragment"
+            app:destination="@id/nav_editTextFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_toggleFragment"
+            app:destination="@id/nav_toggleFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_buttonsFragment"
+            app:destination="@id/nav_buttonsFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_fabFragment"
+            app:destination="@id/nav_fabFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_progressFragment"
+            app:destination="@id/nav_progressFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_illustrationsFragment"
+            app:destination="@id/nav_illustrationsFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_adsFragment"
+            app:destination="@id/nav_adsFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_expandableFragment"
+            app:destination="@id/nav_expandableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_aboutFragment"
+        android:name="com.rnnzzo.uxdesign.ui.about.AboutFragment"
+        android:label="About" />
+    <fragment
+        android:id="@+id/nav_cardsFragment"
+        android:name="com.rnnzzo.uxdesign.ui.cards.CardsFragment"
+        android:label="Cards" />
+    <fragment
+        android:id="@+id/nav_dialogsFragment"
+        android:name="com.rnnzzo.uxdesign.ui.dialogs.DialogsFragment"
+        android:label="Dialogs" />
+    <fragment
+        android:id="@+id/nav_editTextFragment"
+        android:name="com.rnnzzo.uxdesign.ui.editText.EditTextFragment"
+        android:label="EditText" />
+    <fragment
+        android:id="@+id/nav_toggleFragment"
+        android:name="com.rnnzzo.uxdesign.ui.toggle.ToggleFragment"
+        android:label="Toggle" />
+    <fragment
+        android:id="@+id/nav_buttonsFragment"
+        android:name="com.rnnzzo.uxdesign.ui.buttons.ButtonsFragment"
+        android:label="Buttons" />
+    <fragment
+        android:id="@+id/nav_fabFragment"
+        android:name="com.rnnzzo.uxdesign.ui.fab.FabFragment"
+        android:label="Fab" />
+    <fragment
+        android:id="@+id/nav_progressFragment"
+        android:name="com.rnnzzo.uxdesign.ui.progress.ProgressFragment"
+        android:label="Progress" />
+    <fragment
+        android:id="@+id/nav_illustrationsFragment"
+        android:name="com.rnnzzo.uxdesign.ui.illustrations.IllustrationsFragment"
+        android:label="Image Slide" />
+    <fragment
+        android:id="@+id/nav_adsFragment"
+        android:name="com.rnnzzo.uxdesign.ui.ads.AdsFragment"
+        android:label="Ads" />
+    <fragment
+        android:id="@+id/nav_expandableFragment"
+        android:name="com.rnnzzo.uxdesign.ui.expandable.ExpandableFragment"
+        android:label="Expandable View" />
+    <fragment
+        android:id="@+id/nav_animations"
+        android:name="com.rnnzzo.uxdesign.ui.animations.AnimationsFragment"
+        android:label="Animations" />
+    <fragment
+        android:id="@+id/nav_pushNotificationsFragment"
+        android:name="com.rnnzzo.uxdesign.ui.pushnotifications.PushNotificationsFragment"
+        android:label="Push Notifications" />
+    <fragment
+        android:id="@+id/nav_donate"
+        android:name="com.rnnzzo.uxdesign.ui.donate.DonateFragment"
+        android:label="Donate" />
+    <fragment
+        android:id="@+id/nav_recyclerViewFragment"
+        android:name="com.rnnzzo.uxdesign.ui.recyclerview.RecyclerViewFragment"
+        android:label="RecyclerView" />
+    <fragment
+        android:id="@+id/nav_referencesFragment"
+        android:name="com.rnnzzo.uxdesign.ui.references.ReferencesFragment"
+        android:label="References" />
+
+</navigation>

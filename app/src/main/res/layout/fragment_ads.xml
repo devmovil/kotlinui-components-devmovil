@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/mid_margin"
+            android:text="Simple Banner"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid_margin"
+            android:layout_gravity="center"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ads_banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/mid_margin"
+            android:text="Smart Banner"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_smart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid_margin"
+            android:layout_gravity="center"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/ads_banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/mid_margin"
+            android:text="Large Banner"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid_margin"
+            android:layout_gravity="center"
+            ads:adSize="LARGE_BANNER"
+            ads:adUnitId="@string/ads_banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/mid_margin"
+            android:text="Medium Rectangle"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_medium_rectanble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid_margin"
+            android:layout_gravity="center"
+            ads:adSize="MEDIUM_RECTANGLE"
+            ads:adUnitId="@string/ads_banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/mid_margin"
+            android:text="Leaderboard Banner"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_leaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid_margin"
+            android:layout_gravity="center"
+            ads:adSize="LEADERBOARD"
+            ads:adUnitId="@string/ads_banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/mid_margin"
+            android:text="Full Banner"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid_margin"
+            android:layout_gravity="center"
+            ads:adSize="FULL_BANNER"
+            ads:adUnitId="@string/ads_banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

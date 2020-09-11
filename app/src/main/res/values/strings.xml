@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UxDesign</string>
+    <string name="str_sample_title">Sample Title</string>
+    <string name="str_action">ACTION</string>
+    <string name="your_sample_description">Your Sample Description</string>
+    <string name="OK">OK</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="small_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada leo in ligula commodo rutrum. </string>
+
+<!--  TEST ADS  -->
+    <string name="ads_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ads_banner_ads">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_banner_design">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="hide">HIDE</string>
+
+</resources>

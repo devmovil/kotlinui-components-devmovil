@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="toolbar_elevation" type="dimen">8dp</item>
+
+    <item name="dimen_card_design" type="dimen">50dp</item>
+    <item name="dimen_card_grid_design" type="dimen">120dp</item>
+
+    <item name="small_margin" type="dimen">4dp</item>
+    <item name="mid_margin" type="dimen">8dp</item>
+    <item name="large_margin" type="dimen">16dp</item>
+    <item name="xlarge_margin" type="dimen">24dp</item>
+    <item name="Xxlarge_margin" type="dimen">36dp</item>
+
+    <item name="mid_card_size" type="dimen">40dp</item>
+
+</resources>
