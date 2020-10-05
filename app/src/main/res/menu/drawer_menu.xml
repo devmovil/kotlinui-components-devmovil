@@ -13,6 +13,16 @@
         app:showAsAction="always"/>
 
     <item
+        android:id="@+id/nav_lottie"
+        android:title="Lottie Animations"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/nav_recyclerViewFragment"
+        android:title="RecyclerView"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/nav_pushNotificationsFragment"
         android:title="Push Notifications"
         app:showAsAction="always"/>

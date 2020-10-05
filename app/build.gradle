@@ -11,8 +11,8 @@ android {
         applicationId "com.rnnzzo.uxdesign"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.0.0.r1"
+        versionCode 5
+        versionName "v1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -62,4 +62,8 @@ dependencies {
     //Billing
     def billing_version = "3.0.0"
     implementation "com.android.billingclient:billing-ktx:$billing_version"
+
+    def lottieVersion = "3.4.4"
+    //Lottie
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }

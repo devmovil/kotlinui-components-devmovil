@@ -103,5 +103,9 @@
         android:id="@+id/nav_referencesFragment"
         android:name="com.rnnzzo.uxdesign.ui.references.ReferencesFragment"
         android:label="References" />
+    <fragment
+        android:id="@+id/nav_lottie"
+        android:name="com.rnnzzo.uxdesign.ui.lottie.LottieFragment"
+        android:label="Lottie" />
 
 </navigation>
