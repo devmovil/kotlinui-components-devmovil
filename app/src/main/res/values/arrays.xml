@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="desserts">
+        <item>Pudding</item>
+        <item>Ice Cream</item>
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
+        <item>Honeycomb</item>
+        <item>Lollipop</item>
+        <item>Cheesecake</item>
+    </string-array>
+
+</resources>

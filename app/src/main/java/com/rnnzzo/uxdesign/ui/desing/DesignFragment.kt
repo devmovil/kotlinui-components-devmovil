@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.rnnzzo.uxdesign.R
 import com.rnnzzo.uxdesign.databinding.FragmentDesignBinding
 import com.rnnzzo.uxdesign.model.DesignItem
+import com.rnnzzo.uxdesign.ui.bottomsheetdialog.BottomSheetFragment
 import com.rnnzzo.uxdesign.util.animOptions
 import com.rnnzzo.uxdesign.util.shareApp
 
@@ -17,6 +18,7 @@ class DesignFragment: Fragment(), DesignAdapter.ClickListener {
 
     private lateinit var binding: FragmentDesignBinding
     private val adapter by lazy { DesignAdapter(getMenuItems(), this) }
+    private var savedView: View? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,11 +27,13 @@ class DesignFragment: Fragment(), DesignAdapter.ClickListener {
     ): View? {
         binding = FragmentDesignBinding.inflate(layoutInflater)
         setHasOptionsMenu(true)
-        return binding.root
+        return savedView ?: binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        if(savedView != null)
+            return
         initRecyclerView()
     }
 
@@ -88,6 +92,24 @@ class DesignFragment: Fragment(), DesignAdapter.ClickListener {
             R.drawable.ic_baseline_vertical_align,
             "Expandable View",
             R.id.action_nav_designFragment_to_nav_expandableFragment
+        ),
+        DesignItem(
+            11,
+            R.drawable.ic_sharp_more_horiz_24,
+            "Bottom Nav",
+            R.id.action_nav_designFragment_to_nav_bottomNavFragment
+        ),
+        DesignItem(
+            12,
+            R.drawable.ic_baseline_edit_attributes_24,
+            "Chips",
+            R.id.action_nav_designFragment_to_nav_bottomNavFragment
+        ),
+        DesignItem(
+            13,
+            R.drawable.ic_baseline_horizontal_rule_24,
+            "Toolbar",
+            R.id.action_nav_designFragment_to_nav_bottomNavFragment
         )
     )
 
@@ -96,6 +118,34 @@ class DesignFragment: Fragment(), DesignAdapter.ClickListener {
         binding.rvDesign.layoutManager = GridLayoutManager(requireActivity(), 2)
         binding.rvDesign.itemAnimator = DefaultItemAnimator()
         binding.rvDesign.adapter = adapter
+    }
+
+    fun bottomSheetClick(itemId: Int, selectedPos: Int){
+        when(itemId){
+            11 -> {
+                val directions = arrayListOf(
+                    R.id.action_nav_designFragment_to_nav_bottomNavFragment,
+                    R.id.action_nav_designFragment_to_nav_shift_bottomFragment,
+                    R.id.action_nav_designFragment_to_nav_icon_bottomFragment
+                )
+                findNavController().navigate(directions[selectedPos], null, animOptions)
+            }
+            12 -> {
+                val directions = arrayListOf(
+                    R.id.nav_chipGroupFragment,
+                    R.id.nav_chipTypesFragment
+                )
+                findNavController().navigate(directions[selectedPos], null, animOptions)
+            }
+            13 -> {
+                val directions = arrayListOf(
+                    R.id.nav_basicToolbarFragment,
+                    R.id.nav_collapseToolbarFragment,
+                    R.id.nav_bottomToolbarFragment
+                )
+                findNavController().navigate(directions[selectedPos], null, animOptions)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -114,6 +164,31 @@ class DesignFragment: Fragment(), DesignAdapter.ClickListener {
 
     override fun onClickListener(pos: Int, aView: View) {
         val item = adapter.getItem(pos)
-        findNavController().navigate(item.action, null, animOptions)
+        when (item.id) {
+            11 -> {
+                BottomSheetFragment.newInstance(
+                    item.id,
+                    arrayListOf("Basic", "Shift", "Icon"),
+                    ::bottomSheetClick
+                ).show(childFragmentManager, "BottomSheetDialog")
+            }
+            12 -> {
+                BottomSheetFragment.newInstance(
+                    item.id,
+                    arrayListOf("Chip Group", "Chip Types"),
+                    ::bottomSheetClick
+                ).show(childFragmentManager, "BottomSheetDialog")
+            }
+            13 -> {
+                BottomSheetFragment.newInstance(
+                    item.id,
+                    arrayListOf("Basic", "Collapse", "Bottom"),
+                    ::bottomSheetClick
+                ).show(childFragmentManager, "BottomSheetDialog")
+            }
+            else -> {
+                findNavController().navigate(item.action, null, animOptions)
+            }
+        }
     }
 }

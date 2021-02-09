@@ -13,5 +13,7 @@
     <item name="Xxlarge_margin" type="dimen">36dp</item>
 
     <item name="mid_card_size" type="dimen">40dp</item>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
 
 </resources>

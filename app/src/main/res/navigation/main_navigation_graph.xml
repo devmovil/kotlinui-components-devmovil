@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
     app:startDestination="@id/nav_designFragment">
 
@@ -38,6 +39,15 @@
         <action
             android:id="@+id/action_nav_designFragment_to_nav_expandableFragment"
             app:destination="@id/nav_expandableFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_bottomNavFragment"
+            app:destination="@id/nav_bottomNavFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_shift_bottomFragment"
+            app:destination="@id/nav_bottomNavShiftFragment" />
+        <action
+            android:id="@+id/action_nav_designFragment_to_nav_icon_bottomFragment"
+            app:destination="@id/nav_BottomNavIconFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_aboutFragment"
@@ -107,5 +117,43 @@
         android:id="@+id/nav_lottie"
         android:name="com.rnnzzo.uxdesign.ui.lottie.LottieFragment"
         android:label="Lottie" />
+    <fragment
+        android:id="@+id/nav_bottomNavFragment"
+        android:name="com.rnnzzo.uxdesign.ui.bottomnav.BottomNavBasicFragment"
+        android:label="Bottom Nav Basic"
+        tools:layout="@layout/fragment_bottom_nav" />
+    <fragment
+        android:id="@+id/nav_bottomNavShiftFragment"
+        android:name="com.rnnzzo.uxdesign.ui.bottomnav.BottomNavShiftFragment"
+        android:label="Bottom Nav Shift" />
+    <fragment
+        android:id="@+id/nav_BottomNavIconFragment"
+        android:name="com.rnnzzo.uxdesign.ui.bottomnav.BottomNavIconFragment"
+        android:label="Bottom Nav Icon" />
+    <fragment
+        android:id="@+id/nav_chipGroupFragment"
+        android:name="com.rnnzzo.uxdesign.ui.chips.ChipGroupFragment"
+        android:label="Chip Group"
+        tools:layout="@layout/fragment_chip_group" />
+    <fragment
+        android:id="@+id/nav_chipTypesFragment"
+        android:name="com.rnnzzo.uxdesign.ui.chips.ChipTypesFragment"
+        android:label="Chip Types"
+        tools:layout="@layout/fragment_chip_types" />
+    <fragment
+        android:id="@+id/nav_basicToolbarFragment"
+        android:name="com.rnnzzo.uxdesign.ui.toolbars.BasicToolbarFragment"
+        android:label="fragment_basic_toolbar"
+        tools:layout="@layout/fragment_basic_toolbar" />
+    <fragment
+        android:id="@+id/nav_collapseToolbarFragment"
+        android:name="com.rnnzzo.uxdesign.ui.toolbars.CollapseToolbarFragment"
+        android:label="fragment_collapse_toolbar"
+        tools:layout="@layout/fragment_collapse_toolbar" />
+    <fragment
+        android:id="@+id/nav_bottomToolbarFragment"
+        android:name="com.rnnzzo.uxdesign.ui.toolbars.BottomToolbarFragment"
+        android:label="fragment_bottom_toolbar"
+        tools:layout="@layout/fragment_bottom_toolbar" />
 
 </navigation>

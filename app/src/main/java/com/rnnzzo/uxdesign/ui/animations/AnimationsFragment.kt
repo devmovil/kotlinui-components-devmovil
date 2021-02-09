@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.gms.ads.AdRequest
 import com.rnnzzo.uxdesign.databinding.FragmentAnimationsBinding
 
 class AnimationsFragment: Fragment() {
@@ -27,6 +28,7 @@ class AnimationsFragment: Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initEvents()
+        loadAds()
     }
 
     private fun initEvents(){
@@ -87,5 +89,12 @@ class AnimationsFragment: Fragment() {
                 view.isEnabled = true
             }
         })
+    }
+
+    //ADS
+
+    fun loadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.bannerAnimation.loadAd(adRequest)
     }
 }

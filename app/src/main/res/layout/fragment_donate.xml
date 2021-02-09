@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/donatecontainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/MaterialAppTheme"
     android:orientation="vertical"
-    android:padding="@dimen/large_margin"
     android:gravity="center"
     android:background="@color/colorPrimary">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
+        android:layout_height="match_parent"
+        android:padding="16dp"
         android:layout_gravity="center"
-        android:text="I would be very gratefult if you donate me for a cup of coffee!"/>
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="@dimen/large_margin"
-        android:src="@drawable/ic_espresso"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:text="I would be very gratefult if you donate me for a cup of coffee!"/>
 
-    <TextView
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/large_margin"
+            android:src="@drawable/ic_espresso"/>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
@@ -52,7 +61,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="@dimen/large_margin"
-            android:text="5 Cups of Coffee"/>
+            android:text="Watch an Ad"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDonateFive"
@@ -61,11 +70,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/mid_margin"
             android:backgroundTint="@color/colorAccentRed"
-            app:icon="@drawable/ic_coffee_love"
+            app:icon="@drawable/ic_ad"
             app:iconGravity="textStart"
             app:iconPadding="@dimen/large_margin"
-            android:text="$ 5"/>
+            android:text="&lt;3"/>
 
+    </LinearLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner_donate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/ad_banner_donate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-</LinearLayout>
+</FrameLayout>

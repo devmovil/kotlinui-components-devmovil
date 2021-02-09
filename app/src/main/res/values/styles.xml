@@ -15,6 +15,14 @@
         <item name="colorAccent">@color/teal_500</item>
     </style>
 
+    <!-- Base application theme. -->
+    <style name="MaterialBottomNav" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorSecondary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/teal_500</item>
+    </style>
+
     <style name="SplashActivityTheme" parent="MaterialAppTheme">
         <item name="android:windowBackground">@drawable/bg_splash</item>
         <item name="android:statusBarColor">@color/colorPrimary</item>

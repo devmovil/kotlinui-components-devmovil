@@ -19,4 +19,5 @@ class DonateFragment: Fragment() {
         binding = FragmentDonateBinding.inflate(inflater)
         return binding.root
     }
+
 }
